@@ -4,15 +4,14 @@
     "tasks": [
         {
             "label": "Compile",
-            "command": "clang",
+            "command": "gcc",
             "args": [
                 "${file}",
-                "-o",
+                //"-o",
                 "${fileDirname}/${fileBasenameNoExtension}.exe",
                 "-g",
                 "-Wall",
                 "-static-libgcc",
-                "-fcolor-diagnostics",
                 "-std=c11"
             ],
             "type": "shell",
@@ -26,7 +25,7 @@
                 "focus": false,
                 "panel": "shared"
             },
-            "problemMatcher": []
+            "problemMatcher": ["$gcc"]
         }
     ]
 }
